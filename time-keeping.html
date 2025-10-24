@@ -60,44 +60,51 @@
                     <form>
                         <div class="form-row">
                             <div class="form-group col-md-6">
-                                <label class="border-bottom" for="inputWorkingDays" id="inputWorkingDays">Working days</label>
+                                <label class="border-bottom" for="inputWorkingDays">Working days<sup
+                                        class="text-danger">*</sup></label>
                                 <input type="date" class="form-control" id="inputWorkingDays">
+                                <h6 class="small text-danger d-none" id="alertInputWorkingDays" for="inputWorkingDays">*Working days is required</h6>
                             </div>
                             <div class="form-group col-md-6">
-                                <label class="border-bottom" for="radioWorkStatus">Work status</label>
+                                <label class="border-bottom">Work status</label>
                                 <div class="d-flex justify-content-around align-items-center my-2">
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                        <input class="form-check-input" type="radio" name="radioWorkStatus"
                                             id="radioWorking" value="Working" checked>
                                         <label class="form-check-label" for="radioWorking">Working</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                        <input class="form-check-input" type="radio" name="radioWorkStatus"
                                             id="radioOff" value="Off">
                                         <label class="form-check-label" for="radioOff">Off</label>
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group col-md-6">
-                                <label class="border-bottom" for="inputTimekeeping">Timekeeping</label>
+                                <label class="border-bottom" for="inputNote">Note</label>
+                                <input type="text" class="form-control" id="inputNote">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label class="border-bottom">Work shift</label>
+                                <h6 class="small text-danger d-none" id="alertCheckboxWorkShift">(Work shift is required)</h6>
                                 <div class="d-flex justify-content-around align-items-center my-2">
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="checkboxTime1" value="ca1">
-                                        <label class="form-check-label" for="checkboxTime1">6h30</label>
+                                        <input class="form-check-input" name="checkboxWorkShift" type="checkbox" id="checkboxShift1" value="6h30">
+                                        <label class="form-check-label" for="checkboxShift1">6h30</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="checkboxTime2" value="ca2">
-                                        <label class="form-check-label" for="checkboxTime2">15h30</label>
+                                        <input class="form-check-input" name="checkboxWorkShift" type="checkbox" id="checkboxShift2" value="15h30">
+                                        <label class="form-check-label" for="checkboxShift2">15h30</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="checkbox" id="checkboxTime3" value="ca3">
-                                        <label class="form-check-label" for="checkboxTime3">17h30</label>
+                                        <input class="form-check-input" name="checkboxWorkShift" type="checkbox" id="checkboxShift3" value="17h30">
+                                        <label class="form-check-label" for="checkboxShift3">17h30</label>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-12 border-top">
                                 <div class="d-flex justify-content-around mt-3">
-                                    <button type="submit" class="btn btn-primary w-25">Save</button>
+                                    <button type="button" id="btnSave" class="btn btn-primary w-25">Save</button>
                                 </div>
                             </div>
                         </div>
