@@ -1,0 +1,31 @@
+{
+    "TimeKeeping": [
+        {
+            "wrkDate": "2025-10-25",
+            "wrkStas": "Working",
+            "note": "abc",
+            "workShift": [
+                "6h30",
+                "15h30"
+            ],
+            "id": "1"
+        },
+        {
+            "wrkDate": "2025-10-24",
+            "wrkStas": "Working",
+            "note": "xyz",
+            "workShift": [
+                "6h30",
+                "15h30"
+            ],
+            "id": "2"
+        }
+    ],
+    "JobOverview": [
+        {
+            "totalPay": 6675000,
+            "totalUnpaid": 1675000,
+            "id": "1"
+        }
+    ]
+}

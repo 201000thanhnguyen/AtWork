@@ -16,35 +16,32 @@
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">ThanhNHM</a>
+        <a class="navbar-brand" href="/">ThanhNHM</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarScroll"
             aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarScroll">
             <ul class="navbar-nav mr-auto my-2 my-lg-0 navbar-nav-scroll" style="max-height: 100px;">
-                <li class="nav-item active">
-                    <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
-                </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Timekeeping</a>
+                    <a class="nav-link" href="/">Home</a>
                 </li>
-                <li class="nav-item dropdown">
+                <li class="nav-item dropdown active">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
                         aria-expanded="false">
-                        Test Dropdown
+                        Badminton
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
+                        <li class="">
+                            <a class="dropdown-item" href="./time-keeping.html">Time keeping</a>
                         </li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <li class="">
+                            <a class="dropdown-item" href="./job-overview.html">Job overview</a>
+                        </li>
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link disabled">Link</a>
+                    <a class="nav-link disabled">Contact</a>
                 </li>
             </ul>
             <form class="d-flex">
@@ -53,7 +50,7 @@
             </form>
         </div>
     </nav>
-    <div class="container my-5">
+    <div class="container my-5 w-100">
         <div class="row">
             <div class="col-md-12 border rounded">
                 <div class="form-group my-3">
@@ -63,7 +60,8 @@
                                 <label class="border-bottom" for="inputWorkingDays">Working days<sup
                                         class="text-danger">*</sup></label>
                                 <input type="date" class="form-control" id="inputWorkingDays">
-                                <h6 class="small text-danger d-none" id="alertInputWorkingDays" for="inputWorkingDays">*Working days is required</h6>
+                                <h6 class="small text-danger d-none" id="alertInputWorkingDays" for="inputWorkingDays">
+                                    *Working days is required</h6>
                             </div>
                             <div class="form-group col-md-6">
                                 <label class="border-bottom">Work status</label>
@@ -86,24 +84,28 @@
                             </div>
                             <div class="form-group col-md-6">
                                 <label class="border-bottom">Work shift</label>
-                                <h6 class="small text-danger d-none" id="alertCheckboxWorkShift">(Work shift is required)</h6>
+                                <h6 class="small text-danger d-none" id="alertCheckboxWorkShift">(Work shift is
+                                    required)</h6>
                                 <div class="d-flex justify-content-around align-items-center my-2">
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" name="checkboxWorkShift" type="checkbox" id="checkboxShift1" value="6h30">
+                                        <input class="form-check-input" name="checkboxWorkShift" type="checkbox"
+                                            id="checkboxShift1" value="6h30">
                                         <label class="form-check-label" for="checkboxShift1">6h30</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" name="checkboxWorkShift" type="checkbox" id="checkboxShift2" value="15h30">
+                                        <input class="form-check-input" name="checkboxWorkShift" type="checkbox"
+                                            id="checkboxShift2" value="15h30">
                                         <label class="form-check-label" for="checkboxShift2">15h30</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" name="checkboxWorkShift" type="checkbox" id="checkboxShift3" value="17h30">
+                                        <input class="form-check-input" name="checkboxWorkShift" type="checkbox"
+                                            id="checkboxShift3" value="17h30">
                                         <label class="form-check-label" for="checkboxShift3">17h30</label>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-12 border-top">
-                                <div class="d-flex justify-content-around mt-3">
+                            <div class="form-group col-md-12 mt-3 mb-0">
+                                <div class="d-flex justify-content-around border-top pt-3">
                                     <button type="button" id="btnSave" class="btn btn-primary w-25">Save</button>
                                 </div>
                             </div>
@@ -114,11 +116,28 @@
         </div>
     </div>
 
+    <div class="modal" id="myModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Notification</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p id="modalBodyText"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="btnCloseModal" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <footer class="bg-dark text-light text-center py-2 fixed-bottom">
         &copy; 2025 By ThanhNHM
     </footer>
-
 
     <!-- Optional JavaScript; choose one of the two! -->
 
