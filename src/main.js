@@ -2,6 +2,14 @@ $(document).ready(function () {
   // common functions for all pages
   const payPerShift = 75000; // 75k VND per shift
   var today = new Date().toISOString().split('T')[0];
+  $.ajax({
+    url: "http://localhost:3000/TimeKeeping",
+    type: 'GET',
+    contentType: 'application/json',
+    success: function (data) {
+      console.log(data);
+    }
+  });
 
   $('#myModal').on('hidden.bs.modal', function () {
     document.activeElement.blur(); // tránh cảnh báo aria-hidden
@@ -161,7 +169,7 @@ $(document).ready(function () {
       $('#inputPayDate').val(today);
       $('#inputPayDate').attr('max', today);
 
-      
+
       break;
 
     default:
