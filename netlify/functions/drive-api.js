@@ -1,6 +1,10 @@
 const { google } = require('googleapis');
+
+// Lấy JSON từ biến môi trường
+const credentials = JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT);
+
 const auth = new google.auth.GoogleAuth({
-  keyFile: './service-account.json', // Netlify sẽ cần upload file này
+  credentials,
   scopes: ['https://www.googleapis.com/auth/drive'],
 });
 
