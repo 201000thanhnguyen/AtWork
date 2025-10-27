@@ -1,15 +1,12 @@
 $(document).ready(function () {
+  // test
+  $.get('/.netlify/functions/drive-api?id=1dbXzTRzjaWznQysZDKMzhQqJ1kw10f8T', function (data) {
+    console.log(data);
+  });
+
   // common functions for all pages
   const payPerShift = 75000; // 75k VND per shift
   var today = new Date().toISOString().split('T')[0];
-  $.ajax({
-    url: "http://localhost:3000/TimeKeeping",
-    type: 'GET',
-    contentType: 'application/json',
-    success: function (data) {
-      console.log(data);
-    }
-  });
 
   $('#myModal').on('hidden.bs.modal', function () {
     document.activeElement.blur(); // tránh cảnh báo aria-hidden

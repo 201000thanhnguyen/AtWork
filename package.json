@@ -4,19 +4,25 @@
   "description": "Web tĩnh AtWork, deploy Netlify, hỗ trợ npm libraries",
   "scripts": {
     "build": "copyfiles -u 1 src/**/* dist",
-    "serve": "json-server --watch db.json --port 3000",
     "clean": "rimraf dist"
   },
   "devDependencies": {
     "copyfiles": "^2.4.1",
-    "json-server": "^1.0.0-beta.3",
     "rimraf": "^5.0.0"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/201000thanhnguyen/AtWork.git"
   },
-  "keywords": ["web", "static", "netlify", "npm"],
+  "keywords": [
+    "web",
+    "static",
+    "netlify",
+    "npm"
+  ],
   "author": "ThanhNHM",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "googleapis": "^164.1.0"
+  }
 }
